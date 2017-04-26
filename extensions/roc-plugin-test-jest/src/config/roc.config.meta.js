@@ -1,7 +1,7 @@
 import {
     isPath,
     notEmpty,
-    isBoolean,
+    isString,
 } from 'roc/validators';
 
 export default {
@@ -14,9 +14,9 @@ export default {
                 config: {
                 },
                 reporter: {
-                    junit: {
-                        description: 'report result in the junit format',
-                        validator: notEmpty(isBoolean),
+                    format: {
+                        description: 'Report format, there is only support for junit',
+                        validator: isString(/junit/),
                     },
                     filepath: {
                         description: 'Path to report file',

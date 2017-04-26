@@ -36,7 +36,7 @@ export default ({ context }) => (targets, managedOptions, extraArgs = []) => {
                 resolver: require.resolve('./utils/roc-resolver.js'),
                 globals,
             };
-            if (context.config.settings.test.jest.reporter.junit) {
+            if (context.config.settings.test.jest.reporter.format === 'junit') {
                 jestConfig = {
                     ...jestConfig,
                     testResultsProcessor: require.resolve('jest-junit'),
