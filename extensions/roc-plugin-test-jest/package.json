@@ -35,7 +35,8 @@
     "eslint": "~3.0.1",
     "eslint-config-airbnb-base": "~4.0.0",
     "eslint-plugin-babel": "~3.3.0",
-    "eslint-plugin-import": "~1.10.2"
+    "eslint-plugin-import": "~1.10.2",
+    "jest-junit": "^1.5.1"
   },
   "roc": {
     "packages": [
