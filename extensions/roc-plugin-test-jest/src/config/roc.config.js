@@ -5,8 +5,8 @@ export default {
                 config: {
                 },
                 reporter: {
-                    'format': '',
-                    'filepath': 'junit.xml',
+                    format: '',
+                    filepath: 'junit.xml',
                 },
             },
         },

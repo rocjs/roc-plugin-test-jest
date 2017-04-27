@@ -41,8 +41,8 @@ export default ({ context }) => (targets, managedOptions, extraArgs = []) => {
                     ...jestConfig,
                     testResultsProcessor: require.resolve('jest-junit'),
                 };
-                process.env['JEST_JUNIT_OUTPUT'] = context.config.settings.test.jest.reporter.filepath;
-                process.env['JEST_USE_PATH_FOR_SUITE_NAME'] = true;
+                process.env.JEST_JUNIT_OUTPUT = context.config.settings.test.jest.reporter.filepath;
+                process.env.JEST_USE_PATH_FOR_SUITE_NAME = true;
             }
 
             /**
