@@ -8,8 +8,6 @@ export default {
         },
     },
     config: {
-        jest: {
-            description: 'Jest configuration.',
-        },
+        jest: undefined,
     },
 };
