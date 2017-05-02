@@ -2,8 +2,10 @@ export default {
     settings: {
         test: {
             jest: {
-                reporter: '',
-                reportpath: 'junit.xml',
+                junit: {
+                    enabled: false,
+                    reportpath: 'junit.xml',
+                },
             },
         },
     },
