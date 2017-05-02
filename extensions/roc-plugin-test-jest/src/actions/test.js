@@ -36,12 +36,12 @@ export default ({ context }) => (targets, managedOptions, extraArgs = []) => {
                 resolver: require.resolve('./utils/roc-resolver.js'),
                 globals,
             };
-            if (context.config.settings.test.jest.reporter.format === 'junit') {
+            if (context.config.settings.test.jest.reporter === 'junit') {
                 jestConfig = {
                     ...jestConfig,
                     testResultsProcessor: require.resolve('jest-junit'),
                 };
-                process.env.JEST_JUNIT_OUTPUT = context.config.settings.test.jest.reporter.filepath;
+                process.env.JEST_JUNIT_OUTPUT = context.config.settings.test.jest.reportpath;
                 process.env.JEST_USE_PATH_FOR_SUITE_NAME = true;
             }
 
@@ -52,10 +52,10 @@ export default ({ context }) => (targets, managedOptions, extraArgs = []) => {
             1. "jest" inside roc.config.js
             2. "jest" inside package.json
             */
-            if (context.config.settings.test.jest) {
+            if (context.config.jest) {
                 jestConfig = {
                     ...jestConfig,
-                    ...context.config.settings.test.jest.config,
+                    ...context.config.jest,
                 };
             } else if (context.packageJSON.jest) {
                 jestConfig = {

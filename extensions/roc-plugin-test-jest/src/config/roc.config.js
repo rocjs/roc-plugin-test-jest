@@ -2,13 +2,14 @@ export default {
     settings: {
         test: {
             jest: {
-                config: {
-                },
-                reporter: {
-                    format: '',
-                    filepath: 'junit.xml',
-                },
+                reporter: '',
+                reportpath: 'junit.xml',
             },
+        },
+    },
+    config: {
+        jest: {
+            description: 'Jest configuration.',
         },
     },
 };
