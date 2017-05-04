@@ -1,3 +1,4 @@
+import { getAbsolutePath } from 'roc';
 import jest from 'jest';
 
 import { invokeHook } from '../roc/util';
@@ -41,7 +42,10 @@ export default ({ context }) => (targets, managedOptions, extraArgs = []) => {
                     ...jestConfig,
                     testResultsProcessor: require.resolve('jest-junit'),
                 };
-                process.env.JEST_JUNIT_OUTPUT = context.config.settings.test.jest.junit.reportpath;
+                process.env.JEST_JUNIT_OUTPUT = getAbsolutePath(
+                    context.config.settings.test.jest.junit.path,
+                    context.directory
+                );
                 process.env.JEST_USE_PATH_FOR_SUITE_NAME = true;
             }
 

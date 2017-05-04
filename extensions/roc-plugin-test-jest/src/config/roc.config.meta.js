@@ -1,7 +1,8 @@
 import {
+    isBoolean,
     isPath,
     notEmpty,
-    isBoolean,
+    required,
 } from 'roc/validators';
 
 export default {
@@ -10,13 +11,12 @@ export default {
             jest: {
                 junit: {
                     enabled: {
-                        description: 'Enable Junit Report format',
-                        validator: notEmpty(isBoolean),
+                        description: 'If a JUnit report should be be created.',
+                        validator: required(isBoolean),
                     },
-
-                    reportpath: {
-                        description: 'Path to report file',
-                        validator: notEmpty(isPath),
+                    path: {
+                        description: 'Where the file should be written.',
+                        validator: required(notEmpty(isPath)),
                     },
                 },
             },

@@ -4,7 +4,7 @@ export default {
             jest: {
                 junit: {
                     enabled: false,
-                    reportpath: 'junit.xml',
+                    path: 'reports/junit.xml',
                 },
             },
         },
