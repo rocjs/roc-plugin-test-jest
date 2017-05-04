@@ -3,9 +3,8 @@ module.exports = {
         runtime: {
             applicationName: 'Jest Test',
         },
-        test: {
-            jest:{
-            }
-        }
+        build: {
+            routes: 'src/routes.js',
+        },
     },
 };
