@@ -9,7 +9,5 @@ export default {
             },
         },
     },
-    config: {
-        jest: undefined,
-    },
+    jest: undefined,
 };

@@ -22,9 +22,7 @@ export default {
             },
         },
     },
-    config: {
-        jest: {
-            description: 'Jest configuration.',
-        },
+    jest: {
+        description: 'Jest configuration.',
     },
 };
