@@ -52,10 +52,10 @@ export default ({ context }) => (targets, managedOptions, extraArgs = []) => {
             1. "jest" inside roc.config.js
             2. "jest" inside package.json
             */
-            if (context.jest) {
+            if (context.config.jest) {
                 jestConfig = {
                     ...jestConfig,
-                    ...context.jest,
+                    ...context.config.jest,
                 };
             } else if (context.packageJSON.jest) {
                 jestConfig = {
